@@ -21,7 +21,7 @@ class SignUp extends Component {
     return (
       <div className="container">
         <form onSubmit={this.handelSbmit} className="white">
-          <h5 className="grey-text text-darken-3">SignIn</h5>
+          <h5 className="grey-text text-darken-3">SignUp</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handelChange} />
