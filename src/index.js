@@ -25,7 +25,7 @@ const store = createStore(
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
     reduxFirestore(firebaseConfig, firebase)
-    // reactReduxFirebase(firebaseConfig)
+    //reactReduxFirebase(firebaseConfig)
   )
 );
 
