@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBLayFZV5d5IIUxahtSe3pq8clPXbaGP14",
   authDomain: "mario-be968.firebaseapp.com",
   projectId: "mario-be968",
