@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 class Dashboard extends Component {
   render() {
     //  console.log(this.props.projects);
-    const projectsList = this.props;
+    const projectsList = this.props.projects;
     return (
       <div className="dashboard container">
         <div className="row">
