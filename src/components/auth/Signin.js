@@ -22,7 +22,7 @@ class SignIn extends Component {
   };
 
   render() {
-    const { auth_error } = this.props;
+    const { auth_error } = this.props; //destruction du variable auth_error à partir de l'objet props
     console.log("ERRRR", this.props.auth_error);
     return (
       <div className="container">
