@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logIn } from "../store/actions/authActions";
+import { Redirect } from "react-router-dom";
 
 class SignIn extends Component {
   state = {
@@ -22,8 +23,9 @@ class SignIn extends Component {
   };
 
   render() {
-    const { auth_error } = this.props; //destruction du variable auth_error à partir de l'objet props
+    const { auth_error, auth } = this.props; //destruction du variable auth_error à partir de l'objet props
     console.log("ERRRR", this.props.auth_error);
+    if (auth.uid) return <Redirect to="/" />;
     return (
       <div className="container">
         <form onSubmit={this.handelSbmit} className="white">
@@ -51,6 +53,7 @@ class SignIn extends Component {
 const mapStateToProps = (state) => {
   return {
     auth_error: state.auth.authError, // (auth c'est la proprieté dans authReducer) (authError : variable qui se trouve dans le state)
+    auth: state.firebase.auth,
   };
 };
 
