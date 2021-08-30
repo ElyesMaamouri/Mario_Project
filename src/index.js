@@ -29,11 +29,21 @@ const store = createStore(
   )
 );
 
+// react-redux-firebase config
+const profileSpecificProps = {
+  enableLogging: false,
+  userProfile: "users", // root that user profiles are written to
+  updateProfileOnLogin: false, // enable/disable updating of profile on login
+  useFirestoreForProfile: true, // Save profile to Firestore instead of Real Time Database
+  useFirestoreForStorageMeta: true, // Metadata associated with storage file uploads goes to Firestore
+};
 const rrfProps = {
   firebase,
-  config: firebaseConfig,
+  config: profileSpecificProps,
   dispatch: store.dispatch,
   createFirestoreInstance,
+  presence: "presence", // where list of online users is stored in database
+  sessions: "sessions",
 };
 
 ReactDOM.render(
